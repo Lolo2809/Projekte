@@ -18,6 +18,22 @@ function setup() {
     }
 }
 
+function drawLink(){
+    for (let i = 0; i < baelle.length; i++) {
+        for (let j = 0; j < baelle.length; j++) {
+            if (j != i) {
+                if (dist(baelle[i].x, baelle[i].y, baelle[j].x, baelle[j].y) <= baelle[i].r * 2) {
+                    linked[i][j] = true;
+                }
+            }
+            if (linked[i][j] == true) {
+                stroke(baelle[i].farbe);
+                line(baelle[i].x, baelle[i].y, baelle[j].x, baelle[j].y);
+            }
+        }
+    }
+}
+
 class Ball {
     constructor() {
         this.r = 15;
@@ -54,22 +70,6 @@ function draw() {
     for (let i = 0; i < baelle.length; i++) {
         baelle[i].rendern();
         baelle[i].update();
-    }
-}
-
-function drawLink(){
-    for (let i = 0; i < baelle.length; i++) {
-        for (let j = 0; j < baelle.length; j++) {
-            if (j != i) {
-                if (dist(baelle[i].x, baelle[i].y, baelle[j].x, baelle[j].y) <= baelle[i].r * 2) {
-                    linked[i][j] = true;
-                }
-            }
-            if (linked[i][j] == true) {
-                stroke(baelle[i].farbe);
-                line(baelle[i].x, baelle[i].y, baelle[j].x, baelle[j].y);
-            }
-        }
     }
 }
 

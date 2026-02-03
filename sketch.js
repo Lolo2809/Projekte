@@ -50,11 +50,14 @@ class Ball {
 
 function draw() {
     background(0);
+    drawLink();
     for (let i = 0; i < baelle.length; i++) {
         baelle[i].rendern();
         baelle[i].update();
     }
+}
 
+function drawLink(){
     for (let i = 0; i < baelle.length; i++) {
         for (let j = 0; j < baelle.length; j++) {
             if (j != i) {

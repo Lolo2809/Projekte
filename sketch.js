@@ -36,7 +36,7 @@ function drawLink(){
 
 class Ball {
     constructor() {
-        this.r = 15;
+        this.r = height/(height/10);
         this.x = random(this.r, (width + 1) - this.r);
         this.y = random(this.r, (height + 1) - this.r);
         this.speedx = random(-2, 2);

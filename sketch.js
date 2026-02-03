@@ -1,4 +1,4 @@
-let baelle = new Array(30);
+let baelle = new Array(15);
 let linked = new Array(baelle.length);
 
 for (let i = 0; i < linked.length; i++) {

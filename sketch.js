@@ -39,8 +39,8 @@ class Ball {
         this.r = windowHeight/(windowHeight/15);
         this.x = random(this.r, (width + 1) - this.r);
         this.y = random(this.r, (height + 1) - this.r);
-        this.speedx = random(-2, 2);
-        this.speedy = random(-2, 2);
+        this.speedx = random(-3, 3);
+        this.speedy = random(-3, 3);
         this.farbe = int(random(100, 256));
     }
 

@@ -18,7 +18,7 @@ function setup() {
         }
     }
 
-    roterBall = new Ball();
+    roterBall = new roterBall();
 }
 
 function drawLink(){

@@ -35,9 +35,9 @@ function drawLink(){
                 line(baelle[i].x, baelle[i].y, baelle[j].x, baelle[j].y);
             }
         }
-        if (dist(baelle[i].x, baelle[i].y, roterBall.x, roterBall.y) <= baelle[i].r * 2) {
+        /*if (dist(baelle[i].x, baelle[i].y, roterBall.x, roterBall.y) <= baelle[i].r * 2) {
                     linked[i][j] = false;
-                }
+                }*/
     }
 }
 

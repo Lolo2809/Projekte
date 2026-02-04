@@ -45,12 +45,6 @@ class roterBall extends Ball{
     constructor(){
         super();
         this.farbe = 255;
-        this.randX = int(random(2));
-        this.randY = int(random(2));
-        if(randX = 0) this.speedx = -3;
-        else this.speedx = 3;
-        if(randY = 0) this.speedy = -3;
-        else this.speedy = 3;
     }
 
     rendern() {

@@ -1,6 +1,6 @@
 let baelle = new Array(10);
 let linked = new Array(baelle.length);
-roterBall;
+//roterBall;
 
 for (let i = 0; i < linked.length; i++) {
     linked[i] = new Array(baelle.length);
@@ -18,7 +18,7 @@ function setup() {
         }
     }
 
-    roterBall = new roterBall();
+    //roterBall = new roterBall();
 }
 
 function drawLink(){

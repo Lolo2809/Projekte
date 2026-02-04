@@ -41,7 +41,7 @@ function drawLink(){
     }
 }
 
-class roterBall extends Ball{
+/*class roterBall extends Ball{
     constructor(){
         super();
         this.farbe = 255;
@@ -53,7 +53,7 @@ class roterBall extends Ball{
         circle(this.x, this.y, this.r * 2);
     }
 
-}
+}*/
 
 class Ball {
     constructor() {

@@ -97,8 +97,8 @@ function draw() {
         baelle[i].update();
 
     }
-    roterBall.rendern();
-    roterBall.update();
+    r.rendern();
+    r.update();
 }
 
 function windowResized(){

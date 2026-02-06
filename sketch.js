@@ -1,6 +1,6 @@
 let baelle = new Array(10);
 let linked = new Array(baelle.length);
-roterBall;
+let r;
 
 for (let i = 0; i < linked.length; i++) {
     linked[i] = new Array(baelle.length);
@@ -18,7 +18,7 @@ function setup() {
         }
     }
 
-    roterBall = new roterBall();
+    r = new RoterBall();
 }
 
 function drawLink(){
@@ -30,7 +30,7 @@ function drawLink(){
                 }
                 
             }
-            if (dist(baelle[i].x, baelle[i].y, roterBall.x, roterBall.y) <= baelle[i].r * 2) {
+            if (dist(baelle[i].x, baelle[i].y, r.x, r.y) <= baelle[i].r * 2) {
                     linked[i][j] = false;
                     linked[j][i] = false;
                 }
@@ -75,7 +75,7 @@ class Ball {
     }
 }
 
-class roterBall extends Ball{
+class RoterBall extends Ball{
     constructor(){
         super();
         this.farbe = 255;

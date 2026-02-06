@@ -1,6 +1,6 @@
 let baelle = new Array(10);
 let linked = new Array(baelle.length);
-//roterBall;
+roterBall;
 
 for (let i = 0; i < linked.length; i++) {
     linked[i] = new Array(baelle.length);
@@ -18,7 +18,7 @@ function setup() {
         }
     }
 
-    //roterBall = new roterBall();
+    roterBall = new roterBall();
 }
 
 function drawLink(){
@@ -30,18 +30,20 @@ function drawLink(){
                 }
                 
             }
+            if (dist(baelle[i].x, baelle[i].y, roterBall.x, roterBall.y) <= baelle[i].r * 2) {
+                    linked[i][j] = false;
+                    linked[j][i] = false;
+                }
             if (linked[i][j] == true) {
                 stroke(baelle[i].farbe);
                 line(baelle[i].x, baelle[i].y, baelle[j].x, baelle[j].y);
             }
         }
-        /*if (dist(baelle[i].x, baelle[i].y, roterBall.x, roterBall.y) <= baelle[i].r * 2) {
-                    linked[i][j] = false;
-                }*/
+        
     }
 }
 
-/*class roterBall extends Ball{
+class roterBall extends Ball{
     constructor(){
         super();
         this.farbe = 255;
@@ -53,7 +55,7 @@ function drawLink(){
         circle(this.x, this.y, this.r * 2);
     }
 
-}*/
+}
 
 class Ball {
     constructor() {
@@ -95,8 +97,8 @@ function draw() {
         baelle[i].update();
 
     }
-    //roterBall.rendern();
-    //roterBall.update();
+    roterBall.rendern();
+    roterBall.update();
 }
 
 function windowResized(){

@@ -43,19 +43,7 @@ function drawLink(){
     }
 }
 
-class roterBall extends Ball{
-    constructor(){
-        super();
-        this.farbe = 255;
-    }
 
-    rendern() {
-        noStroke();
-        fill(this.farbe,0,0);
-        circle(this.x, this.y, this.r * 2);
-    }
-
-}
 
 class Ball {
     constructor() {
@@ -87,7 +75,19 @@ class Ball {
     }
 }
 
+class roterBall extends Ball{
+    constructor(){
+        super();
+        this.farbe = 255;
+    }
 
+    rendern() {
+        noStroke();
+        fill(this.farbe,0,0);
+        circle(this.x, this.y, this.r * 2);
+    }
+
+}
 
 function draw() {
     background(0);
